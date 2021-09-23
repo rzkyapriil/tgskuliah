@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="hasil"></div>
+    <a href="index.html">Kembali ke form</a>
+    <script>
+        const listHasil = document.getElementById('hasil')
+        new URLSearchParams(window.location.search).forEach((value, name) => {
+            listHasil.append(`${name}: ${value}`)
+            listHasil.append(document.createElement('br'))
+        })
+    </script>
+</body>
+</html>
